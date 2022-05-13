@@ -28,4 +28,4 @@ console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12,
 //else return an array with the following:
 //first element in array: the length of the filtered input; callback function returns true if any element is greater than 0
 //second element in array: a reduced value of the filtered input; callback function returns true if any element is less than 0
-const countPositivesSumNegatives = i => !i || !i.length ? [] : [i.filter(e => e > 0).length,i.filter(e => e < 0).reduce((acc,c) => acc + c, 0)];
+const countPositivesSumNegatives = a => !a || !a.length ? [] : [a.filter(e => e > 0).length, a.reduce((acc,c) => acc + (c<0?c:0), 0)];
