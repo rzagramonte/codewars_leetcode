@@ -14,7 +14,7 @@
 // 4 = 2^4
 // 5 = 2^5
 // 6 = 2^6
-// P = 2^7
+// 7 = 2^7
 //
 //P: pseudo code
 //take in n the positive exponent
