@@ -15,36 +15,18 @@ console.log(evalObject({a:1,b:1,operation:'%'}), 0);
 console.log(evalObject({a:1,b:1,operation:'^'}), 1);
 */
 
-
 //declare const variable and assign to arrow function
 //set parameter
 const evalObject = value => {
-    //declare variable
-    var result;
-    //create switch case statement
-    //variable for switch will be the operation property in the object passed in
-    //assign the appropriate expressions for each case
-    //break out of each case
-    switch(value.operation){
-      case'+':
-        result = value.a + value.b;
-        break;
-      case'-':
-        result = value.a - value.b;
-        break;
-      case'/':
-        result = value.a / value.b;
-        break;
-      case'*':
-        result = value.a * value.b;
-        break;
-      case'%':
-        result = value.a % value.b;
-        break;
-      case'^':
-        result = Math.pow(value.a, value.b);
-        break;
-    }
-    //return result
-    return result;
+  //create switch case statement
+  //variable for switch will be the operation property in the object passed in
+  //return the appropriate expressions for each case
+  switch(value.operation){
+    case'+': return value.a + value.b;
+    case'-': return value.a - value.b;
+    case'/': return value.a / value.b;
+    case'*': return value.a * value.b;
+    case'%': return value.a % value.b;
+    case'^': return Math.pow(value.a, value.b);
   };
+};
