@@ -4,19 +4,13 @@ A western man is trying to find gold in a river. To do that, he passes a bucket 
 
 So, you need to check if there is gold in the bucket, and if so, return True/true. If not, return False/false.
 
-P.R.E.P.
-parameters: an array
-return: boolean of true or false
-examples:
-["stone","stone","stone","stone","stone","gold"] => true
-["stone","stone","stone","stone"] => false
-pseudocode:
-declare function
-set parameter
-return bucket appended to includes('gold')
-*/
+Will the parameter always be an array?
+Will the return always be a boolean of true or false?
 
-function checkTheBucket(bucket){
-    //your code here
-    return bucket.includes('gold');
-  }
+console.log(checkTheBucket(["stone", "stone", "stone", "stone", "stone"]), false);
+console.log(checkTheBucket(["stone", "stone", "stone", "stone", "gold"]), true);
+console.log(checkTheBucket(["gold", "stone", "stone", "stone", "stone"]), true);
+console.log(checkTheBucket([]), false);
+console.log(checkTheBucket(["stone", "stone", "stone", "gold", "gold"]), true);
+*/
+const checkTheBucket = bucket => bucket.includes('gold');
