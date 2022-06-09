@@ -15,26 +15,11 @@ If either input is an empty string, consider it as zero.
 
 Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
 
-P.R.E.P.
-parameters: two strings
-return: a number
-examples:
-(Input1, Input2 -->Output)
-
-"4",  "5" --> "9"
-"34", "5" --> "39"
-"", "" --> "0"
-"2", "" --> "2"
-"-5", "3" --> "-2"
-pseudocode:
-declare a function
-set parameters
-use Number()
-add the strings in Number()
-return the number
-append .toString()
+Will the parameters always be a string?
+Will the return always be a string
 */
 
-function sumStr(a,b) {
-  return (Number(a) + Number(b)).toString();
-}
+//declare const variable and assign to arrow function
+//set parameters
+//add the two strings together as numbers then convert back to string
+const sumStr = (a,b) => (+a + +b).toString();
