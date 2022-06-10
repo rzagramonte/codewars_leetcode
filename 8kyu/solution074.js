@@ -8,18 +8,17 @@ Note: only positive integers will be tested.
 
 https://en.wikipedia.org/wiki/Triangle
 
-P.R.E.P.
-parameters: two numbers
-return: one number
-examples:
-(60,60) => 60
-(50,70) => 60
-(50,50) => 80
-pseudocode:
-declare function
-set parameters
-return 180 - (a + b)
+Will the parameter always be two numbers?
+Will the numbers always be positive numbers only?
+Will the return always be two numbers?
+
+console.log(otherAngle(30, 60), 90);
+console.log(otherAngle(60, 60), 60);
+console.log(otherAngle(43, 78), 59);
+console.log(otherAngle(10, 20), 150);
 */
-function otherAngle(a, b) {
-    return 180 - (a + b);
-  }
+
+//declare const variable and assign to arrow function
+//set parameters
+//subtract the sum of a + b from 180
+const otherAngle = (a, b) => 180 - (a + b);
