@@ -6,32 +6,20 @@ Complete the function that takes a string as an argument representing the curren
 
 For example, when the input is green, output should be yellow.
 
-P.R.E.P.
-parameters: a string
-return: a string
-example:
-input => output
-green => yellow
-yellow => red
-red => green
-pseudocode:
-declare function
-set parameter
-create if else statement using switch case
-return specific string based on different conditions
+Will the parameter always be a string?
+Will the string be either "green", "yellow", or "red"?
+Will the return always be a string?
+Will the returned string be either "yellow", "red", or "green"?
+
+console.log(updateLight("green"), "yellow");
+console.log(updateLight("yellow"), "red");
+console.log(updateLight("red"), "green");
 */
 
-function updateLight(current) {
-    //your code here!
-  switch(current){
-    case 'green':
-        return 'yellow';
-        break;
-    case 'yellow':
-        return 'red';
-        break;
-    default:
-        return 'green';
-        break;
-  };
-  }
+
+//declare const variable and assign to arrow function
+//set parameters
+//if current equals in value to 'green' then return 'yellow'
+//if current equals in value to 'yellow' then return 'red'
+//else return 'green'
+const updateLight = current => current == 'green' ? 'yellow' : current == 'yellow' ? 'red' : 'green';
