@@ -9,24 +9,20 @@ Every day you rent the car costs $40. If you rent the car for 7 or more days, yo
 
 Write a code that gives out the total amount for different days(d).
 
-P.R.E.P.
-parameters: a number, d
-return: a number, total
-examples:
-input => output
-3 => $100
-8 => $270
-2 => $80
-pseudocode:
-declare function
-set parameter
-USE TERNARY OPERATOR!
-if d >= 7 (d * 40) - 50
-else if d >=3 && d < 7 (d * 40) - 20
-else d * 40
+Will the parameter always be a number?
+Will the return always be a number?
+
+console.log(rentalCarCost(1), 40);
+console.log(rentalCarCost(2), 80);
+console.log(rentalCarCost(3), 100);
+console.log(rentalCarCost(4), 140);
+console.log(rentalCarCost(5), 180);
+console.log(rentalCarCost(6), 220);
 */
 
-function rentalCarCost(d) {
-    // Your solution here
-    return d >= 7 ? (d * 40) - 50 : d >= 3 && d < 7 ? (d * 40) - 20 : d * 40;
-  }
+//declare const variable and assign to arrow function
+//set parameter
+//is d greater than or equal to 7? then multiply d * 40 then subtract 50
+//is d greater than or equal to 3 and less than 7? then multiply d * 40 then subtract 20
+//else multiply d * 40
+const rentalCarCost = d => d >= 7 ? (d * 40) - 50 : d >= 3 && d < 7 ? (d * 40) - 20 : d * 40;
