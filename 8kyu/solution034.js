@@ -5,14 +5,18 @@ Write a function that takes an array of words and smashes them together into a s
 Example
 ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-P.R.E.P.
-parameters: an array of words
-return: a string
-examples: ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
-pseudocode:
-declare function
-set parameter
-return array with appended join method
+Will the parameter always be an array?
+Will the elements in the array all be strings?
+Will the return be a string?
+
+console.log(smash([]), "");
+console.log(smash(["hello"]), "hello");
+console.log(smash(["hello", "world"]), "hello world");
+console.log(smash(["hello", "amazing", "world"]), "hello amazing world");
+console.log(smash(["this", "is", "a", "really", "long", "sentence"]), "this is a really long sentence");
 */
 
+//declare const variable and assign to arrow function
+//set parameter
+//join strings by a space
 const smash = words => words.join(" ");
