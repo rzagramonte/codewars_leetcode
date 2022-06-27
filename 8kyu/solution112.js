@@ -23,5 +23,5 @@ return position + roll * 2
 
 function move (position, roll) {
     // return the new position
-    return position + (roll * 2)
+    return position + roll * 2;
   }
