@@ -40,5 +40,6 @@ function basicOp(operation, value1, value2){
         break;
     default:
         return value1 / value2
+        break;
   };
 }
