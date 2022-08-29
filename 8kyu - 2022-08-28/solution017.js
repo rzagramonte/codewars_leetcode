@@ -40,11 +40,11 @@ input -> output:
 [8,6,4,5,9,0,1]->[9,8,6,5,4,1,0]
 pseudocode:
 create function declaration or use anon function
-if d = l return min to max
+if d = 'R' return min to max
 else return max to min
 */
 
 const flip=(d, a)=>{
-    //TODO
-     return (d === 'R' ? a.sort((a,b)=>a-b) : a.sort((a,b)=>b-a));
-  }
+  //TODO
+   return (d === 'R' ? a.sort((a,b)=>a-b) : a.sort((a,b)=>b-a));
+};
