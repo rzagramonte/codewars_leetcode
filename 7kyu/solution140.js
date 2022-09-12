@@ -9,7 +9,6 @@ number from 0 to ... . Empty array returns 0
 example
 const arr = [1, -3, -4, 0, 5];
 
-
 | elem | count |
 |------|-------|
 |  1   |  0    |
@@ -17,7 +16,6 @@ const arr = [1, -3, -4, 0, 5];
 | -4   |  1    |
 |  0   |  2    |
 |  5   |  2    |
-
 
 catchSignChange(arr) == 2;
 
