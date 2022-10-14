@@ -5,17 +5,15 @@ Given an array of integers, return a new array with each value doubled.
 For example:
 
 [1, 2, 3] --> [2, 4, 6]
-P.R.E.P.
-parameters: an array of numbers
-return: a new array with each number in the array doubled
-examples:
-[1, 2, 3] --> [2, 4, 6]
-pseudocode:
-declare function
-set parameter
-return arr appended to the map function and multiply each element times two
+
+Will the parameter always be an array?
+Will the elements in the input array always be numbers?
+Will the return always be an array?
+Will the elements in the output array always be numbers?
+
+console.log(maps([1, 2, 3]), [2, 4, 6]);
+console.log(maps([4, 1, 1, 1, 4]), [8, 2, 2, 2, 8]);
+console.log(maps([2, 2, 2, 2, 2, 2]), [4, 4, 4, 4, 4, 4]);
 */
 
-function maps(x){
-    return x.map(element=>element * 2);
-}
+const maps = x => x.map(element=>element * 2);
