@@ -7,27 +7,12 @@ distance between pillars (10 - 30 meters);
 width of the pillar (10 - 50 centimeters).
 Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
 
-P.R.E.P.
-paramters: three numbers
-return: one number
-examples:
-input => output
-(1, 10, 10) => 0
-(2, 20, 25) => 2000
-(11, 15, 30) => 15270
-pseudocode:
-declare function
-set parameters
-create if else statement
-if numPill === 1 return 0
-else  return width * (numPill - 2) + dist * (numPill -1) * 100
+Will the parameters always be three numbers?
+Will the return always be one number?
+
+console.log(pillars(1, 10, 10) , 0);
+console.log(pillars(2, 20, 25) , 2000);
+console.log(pillars(11, 15, 30) , 15270);
 */
 
-function pillars(numPill, dist, width) {
-    // your code here
-    if (numPill === 1){
-      return 0;
-    }else{
-      return width * (numPill - 2) + dist * (numPill -1) * 100;
-    }
-  }
+const pillars = (numPill, dist, width) => numPill === 1 ? 0 : width * (numPill - 2) + dist * (numPill -1) * 100;
