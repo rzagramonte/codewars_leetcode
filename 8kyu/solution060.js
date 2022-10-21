@@ -5,20 +5,17 @@ I'm new to coding and now I want to get the sum of two arrays... Actually the su
 
 P.S. Each array includes only integer numbers. Output is a number too.
 
-P.R.E.P.
-parameters: two arrays
-return: the combination of two arrays into one
-examples:
-input => output
-[2,3,1],[64,53,6,5,4,3] => 141
-pseudocode:
-declare function
-set parameters
-use reduce method on both arrays then add reduced values of both
+Will the parameter always be two arrays?
+Will the elements in the array always be numbers?
+Will the return always be a number?
+
+console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]), 21);
+console.log(arrayPlusArray([-1, -2, -3], [-4, -5, -6]), -21);
+console.log(arrayPlusArray([0, 0, 0], [4, 5, 6]), 15);
+console.log(arrayPlusArray([100, 200, 300], [400, 500, 600]), 2100);
 */
 
-function arrayPlusArray(arr1, arr2) {
-    let sum1 = arr1.reduce((acc,c)=>acc+c,0);
-    let sum2 = arr2.reduce((acc,c)=>acc+c,0);
-    return sum1 + sum2;
-  }
+//declare variable and assign to arrow function
+//set parameters
+//reduce the two arrays and add their final values
+const arrayPlusArray = (arr1, arr2) => arr1.reduce((acc,c)=>acc+c,0) + arr2.reduce((acc,c)=>acc+c,0);
