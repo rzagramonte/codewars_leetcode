@@ -11,26 +11,15 @@ For example:
 "GCAT"  =>  "GCAU"
 The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
 
-P.R.E.P.
-parameters: a string
-return: a modified string if T is present in the argument
-example: "GCAT"  =>  "GCAU"
-pseudocode:
-declare function
-set parameter
-split the string using the split() method
-iterate over the string
-if arr[i] === "T" return "U"
-use the join() method to return the new array
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(DNAtoRNA("TTTT"), "UUUU");
+console.log(DNAtoRNA("GCAT"), "GCAU");
+console.log(DNAtoRNA("GACCGCCGCC"), "GACCGCCGCC");
 */
 
-function DNAtoRNA(dna) {
-    // create a function which returns an RNA sequence from the given DNA sequence
-    let nucleotideBase = dna.split('');
-    for(let i=0; i<nucleotideBase.length; i++){
-        if (nucleotideBase[i] === 'T'){
-            nucleotideBase[i] = 'U';
-        }
-    }
-    return nucleotideBase.join('');
-  }
+//declare variable and assign to arrow function
+//set parameter
+//replace all "T" with "U"
+const DNAtoRNA = dna => dna.replaceAll('T','U');
