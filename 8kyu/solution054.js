@@ -11,26 +11,17 @@ Return True if you're better, else False!
 Note:
 Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 
-P.R.E.P.
-parameters: an array of numbers and a single number
-return: boolean of true or false
-examples:
-input => output
-[89,67,100,55],89 => true
-[100,99,88,98],80 => false
-pseudocode:
-declare function
-set parameters
-push yourPoints to the end of classPoints
-reduce the array to one value and divide by the length of the array
-compare this value to yourPoints
-return true if yourPoints is greater than, else return false
+Will the parameters always be an array and a number?
+Will the elements in the array always be numbers?
+
+console.log(betterThanAverage([2, 3], 5), true);
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
 */
 
-function betterThanAverage(classPoints, yourPoints) {
-    // Your code here
-    classPoints.push(yourPoints);
-    let averagePoints = classPoints.reduce((acc,c)=>acc+c,0) / classPoints.length;
-    return yourPoints > averagePoints ? true : false;
-  }
-  
+//declare variable and assign to arrow function
+//set parameters
+//return true or false if yourPoints are greater than the average classPoints
+const betterThanAverage = (classPoints, yourPoints) => yourPoints > classPoints.reduce((acc,c)=>acc+c,yourPoints) / (classPoints.length + 1);
