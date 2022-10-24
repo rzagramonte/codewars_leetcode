@@ -6,21 +6,16 @@ Array can contain numbers or strings. X can be either.
 
 Return true if the array contains the value, false if not.
 
-P.R.E.P.
-parameters: an array a and a value x (can be number or string)
-return: boolean of true or false
-examples:
-input => output
-a = [3,4,2,'string'] x = 'string' => true
-a = [13,2,7,68,"roses with elephants bum navigatin malls"] x = 3 => 'false'
-pseudocode:
-declare function
-set parameters
-return a appended to includes() method with x passed in as an argument
-includes() will return true or false accordingly
+Will the parameters always be an array and a string or number?
+Will the return always be a boolean of true or false?
+
+console.log(check([66, 101], 66), true);
+console.log(check([101, 45, 75, 105, 99, 107], 107), true);
+console.log(check(['t', 'e', 's', 't'], 'e'), true);
+console.log(check(['what', 'a', 'great', 'kata'], 'kat'), false);
 */
 
-function check(a, x) {
-    // your code here
-    return a.includes(x);
-  }
+//declare variable and assign to arrow function
+//set parameters
+//return true or false if array includes specified element
+const check = (a, x) => a.includes(x);
