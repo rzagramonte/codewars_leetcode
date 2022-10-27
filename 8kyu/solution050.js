@@ -18,34 +18,17 @@ Input constraints:
 0 <= m <= 59
 0 <= s <= 59
 
-P.R.E.P.
-parameters: three numbers, h for hour, m for minutes, s for seconds
-return: a number representing the number of miliseconds after midnight
-examples:
-h = 0
-m = 1
-s = 1
-result = 61000
-pseudocode:
-declare function
-set parameters
-declare variable result and assign it to 0
-create three if statements with conditions of the constraints
-add and reassign result with the hours, minutes, and seconds in milliseconds
-return the result
+Will the paramerters always be three numbers?
+Will the return always be one number?
+
+console.log(past(0,1,1),61000);
+console.log(past(1,1,1),3661000);
+console.log(past(0,0,0),0);
+console.log(past(1,0,1),3601000);
+console.log(past(1,0,0),3600000);
 */
 
-function past(h, m, s){
-    //#Happy Coding! ^_^
-    let result = 0;
-    if(h >= 0 && h <= 23){
-        result += (h * 3600000);
-    };
-    if(m >= 0 && m <= 59){
-        result += (m * 60000);
-    };
-    if(s >= 0 && s <= 59){
-        result += (s * 1000);
-    };
-    return result;
-}
+//declare variable and assign to arrow function
+//set parameter
+//add s time 1000 + m times 60000 + h times 3600000
+const past = (h, m, s) => (s * 1000) + (m * 60000) + (h * 3600000);
