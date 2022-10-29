@@ -10,29 +10,24 @@ Sam Harris => S.H
 
 patrick feeney => P.F
 
-P.R.E.P.
-parameters: a string with two words and a space in between them
-return: first letter of both words with a dot between them and both capital
-examples:
-Sam Harris => S.H
-patrick feeney => P.F
-pseudocode:
-declare function
-set parameter
-declare variable splitNames and assign it to the parameter attached to the split method; split by space
-declare variable firstName and it to assign splitNames.split[0] 
-declare variable to firstInitial and assign it to firstName[0].toUpperCase()
-declare variable lastName and it to assign splitNames.split[1] 
-declare variable to lastInitial and assign it to lastName[0].toUpperCase()
-return first letter + . second letter using a template literal
+Will the parameter always be a string?
+Will the string consist of two names with a space between them?
+Will the return always be a string?
+Will the first character of the returned string be a capital letter?
+Will the second character of the returned string be a period?
+Will the third and last character of the returned string be a capital letter?
+
+console.log(abbrevName("Sam Harris"), "S.H");
+console.log(abbrevName("Patrick Feenan"), "P.F");
+console.log(abbrevName("Evan Cole"), "E.C");
+console.log(abbrevName("P Favuzzi"), "P.F");
+console.log(abbrevName("David Mendieta"), "D.M");
 */
 
-function abbrevName(name){
-    // code away
-    let splitNames = name.split(' ');
-    let firstName = splitNames[0];
-    let firstInitial = firstName[0].toUpperCase();
-    let lastName = splitNames[1];
-    let lastInitial = lastName[0].toUpperCase();
-    return `${firstInitial}.${lastInitial}`;
-}
+//declare variable and assign to arrow function
+//set parameter
+//return string using template literal
+//interpolate the first character of the input name coerced to uppercase
+//proceed with period
+//interpolate the character after ' ' and coerced to uppercase
+const abbrevName = name => `${name[0].toUpperCase()}.${name[name.indexOf(' ')+1].toUpperCase()}`;
