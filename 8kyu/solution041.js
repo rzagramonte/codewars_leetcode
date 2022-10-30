@@ -6,20 +6,15 @@ Write a function feast that takes the animal's name and dish as arguments and re
 
 Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
-P.R.E.P.
-parameters: 2 strings
-return: true or false
-example: 
-input => output
-turtle, popcorn => false
-shark, steak => true
-pseudocode:
-declare function
-set parameters
-if beast[0] === dish[0] and beast[beast.length-1 === dish[dish.length-1] return true else return false
+Will the parameters always be two strings?
+Will the return always be a boolean of true or false?
+
+console.log(feast("great blue heron", "garlic naan"), true);
+console.log(feast("chickadee", "chocolate cake"), true);
+console.log(feast("brown bear", "bear claw"), false);
 */
 
-function feast(beast, dish) {
-    //your function here
-    return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1] ? true : false;
-    }
+//declare variable and assign to arrow function
+//set parameters
+//return true if first letter in beast and dish are equal and value AND last letter in beast and dish are equal in value, else return false
+const feast = (beast, dish) => beast[0] == dish[0] && beast[beast.length - 1] == dish[dish.length - 1];
