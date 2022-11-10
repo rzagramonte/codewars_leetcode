@@ -9,30 +9,23 @@ if bmi <= 25.0 return "Normal"
 if bmi <= 30.0 return "Overweight"
 
 if bmi > 30 return "Obese"
-P.R.E.P.
-parameters: weight and height both numbers
-return: a string
-examples:
-if bmi <= 18.5 return "Underweight"
-if bmi <= 25.0 return "Normal"
-if bmi <= 30.0 return "Overweight"
-if bmi > 30 return "Obese"
-pseudocode:
-declare function
-set parameters
-set bmi = weight / (height **2)
-create if else statement for each condition and return statement
+
+Will the parameter always be two numbers?
+Will the return always be a string?
+
+console.log(bmi(80, 1.80), "Normal");
 */
 
-function bmi(weight, height) {
-    let bmi = weight / (height **2)
-    if (bmi <= 18.5){
-      return "Underweight";
-    }else if(bmi <= 25.0){
-      return "Normal";
-    }else if(bmi <= 30.0){
-      return "Overweight";
-    }else{
-      return "Obese";
-  };
-  };
+//declare variable and assign to arrow function
+//set parameters
+const bmi = (weight, height) => {
+  //declare variable and assign to weight divided by height squared
+  let bmi = weight / (height**2);
+  //if bmi is less than or equal to 18.5, return "Underweight"
+  //else if bmi is less than or equal to 25.0, return "Normal"
+  //else if bmi is less than or equal to 30.0, return "Overweight"
+  //else return "Obese"
+  return bmi <= 18.5 ? "Underweight" :
+         bmi <= 25.0 ? "Normal" :
+         bmi <= 30.0 ? "Overweight" : "Obese";
+};
