@@ -9,24 +9,16 @@ name + " plays banjo"
 name + " does not play banjo"
 Names given are always valid strings.
 
-P.R.E.P.
-parameters: a string name
-return: a concatenated string with name
-examples:
-input => output
-Robert => "Robert plays banjo"
-Amanda => "Amanda does not play banjo"
-pseudocode:
-declare a function
-set parameter name
-let name = name.toLowerCase()
-let char = split method on lowerName
-if char[0] === r then return `${name} plays banjo` else return `${name} does not play banjo`
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(areYouPlayingBanjo("Adam"), "Adam does not play banjo");
+console.log(areYouPlayingBanjo("Paul"), "Paul does not play banjo");
+console.log(areYouPlayingBanjo("Ringo"), "Ringo plays banjo");
+console.log(areYouPlayingBanjo("bravo"), "bravo does not play banjo");
+console.log(areYouPlayingBanjo("rolf"), "rolf plays banjo");
 */
 
-function areYouPlayingBanjo(name) {
-    // Implement me
-    let lowerName = name.toLowerCase();
-    let char = lowerName.split('');
-    return (char[0]==='r' ? `${name} plays banjo` : `${name} does not play banjo`);
-  }
+//declare const variable and assign to arrow function
+//if first letter of name is "r" or "R" return "name plays banjo", else return "name does not play banjo"
+const areYouPlayingBanjo = name => name[0] === 'r' || name[0] === 'R' ? `${name} plays banjo` : `${name} does not play banjo`;
