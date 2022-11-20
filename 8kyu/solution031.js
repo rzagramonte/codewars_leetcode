@@ -27,5 +27,5 @@ console.log(index([75,68,35,61,9,36,89,0,30], 10),-1);
 */
 
 //declare variable and assign to arrow function
-//if the length of the array is greater than n, return element to the nth power, else return -1
-const index = (array, n) => array.length > n ? Math.pow(array[n], n) : -1;
+//if array[n] is truthy it will evaluate to the nth power else return -1
+const index = (array, n) => array[n] ** n || -1;
