@@ -28,8 +28,8 @@ const getGrade = (s1, s2, s3) => {
     // assign variable average to (s1 + s2 + s3)/3
     let average = (s1 + s2 + s3)/3;
     // create if else statement to return the correct letter for the score
-    return 90 <= average && average <= 100 ? 'A':
-           80 <= average && average < 90 ? 'B':
-           70 <= average && average < 80 ? 'C':
-           60 <= average && average < 70 ? 'D':'F';
+    return average >= 90 ? 'A':
+           average >= 80 ? 'B':
+           average >= 70 ? 'C':
+           average >= 60 ? 'D':'F';
   };
