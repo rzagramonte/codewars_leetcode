@@ -12,6 +12,7 @@ Numerical Score	Letter Grade
 Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
 
 Will the parameters always be three numbers?
+Will the numbers be only 0-100?
 Will the return always be a string?
 Will the string be "A", "B", "C", "D", or "F"?
 
