@@ -1,18 +1,16 @@
 /*
 Remove String Spaces
 Simple, remove the spaces from the string, then return the resultant string.
-P.R.E.P.
-parameters: a string
-return: a string with no spaces
-examples:
-input => output
-"hello i am a string" => "helloiamastring"
-pseudocode:
-declare function
-set parameter x for the string
-use the split method and join method to return the modified string
+
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'), '8j8mBliB8gimjB8B8jlB');
+console.log(noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd'), '88Bifk8hB8BB8BBBB888chl8BhBfd');
+console.log(noSpace('8aaaaa dddd r     '), '8aaaaaddddr');
 */
 
-function noSpace(x){
-    return x.split(' ').join('');
-  }
+//declare variable and assign it to an arrow function
+//set parameter
+//replace all spaces with no spaces
+const noSpace = x => x.replaceAll(' ','');
