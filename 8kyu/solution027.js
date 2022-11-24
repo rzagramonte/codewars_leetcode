@@ -1,19 +1,14 @@
 /*
 MakeUpperCase
 Write a function which converts the input string to uppercase.
-P.R.E.P.
-parameters: str as a string
-return: return string in uppercase
-examples: 
-input: "hello" output: "HELLO"
-pseudocode:
-declare a function
-set parameter str
-use the method toUpperCase
-return the value of the method appended to the string
+
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(makeUpperCase("hello"), "HELLO");
 */
 
-function makeUpperCase(str) {
-    // Code here
-    return str.toUpperCase();
-  }
+//declare a variable and assign it to an arrow function
+//set parameter
+//convert string to uppercase
+const makeUpperCase = str => str.toUpperCase();
