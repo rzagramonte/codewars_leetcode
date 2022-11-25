@@ -9,22 +9,17 @@ n = 5, m = 5: 25
 n = -5, m = 5:  0
 Waiting for translations and Feedback! Thanks!
 
-P.R.E.P.
-parameters: n for the number of classmates and m for the number of pages of the paperwork
-return:
-If n < 0 or m < 0 return 0.
-examples:
-n = 5, m = 5: 25
-n = 3, m = 20: 60
-n = -5, m = 5:  0
-pseudocode:
-declare a function
-set parameters n and m
-return an evaluation using ternary operator
-if n and m > 0 return n * m
-else return 0
+Will the parameter always be two numbers?
+Will the return always be one number?
+
+console.log(paperwork(5,5), 25);
+console.log(paperwork(5,-5), 0);
+console.log(paperwork(-5,-5), 0);
+console.log(paperwork(-5,5), 0);
+console.log(paperwork(5,0), 0);
 */
 
-function paperwork(n, m){
-    return((n > 0 && m > 0) ? (n * m) : 0);
-};
+//declare variable and assign to arrow function
+//set parameters
+//if n is greater and 0 and m is greater than 0, then return n time m, else return 0
+const paperwork = (n, m) => n > 0 && m > 0 ? n * m : 0;
