@@ -11,32 +11,16 @@ countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
 countBy(2,5) === [2,4,6,8,10]
 
 
-P.R.E.P.
-parameters: n and x
+Will the parameters always be two numbers?
+Will the return always be an array?
+Will the array's elements always be numbers?
 
-return: an array of the first n multiples of x
-
-example:
-(x, n)
-countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
-countBy(2,5) === [2,4,6,8,10]
-
-pseudocode:
-declare function
-set parameters x and n
-let z equal an empty array
-create for loop
-let i = 1 set as the initializer
-i <= n as the condition
-i++ as the final expression
-in the loop body push (using push method) x times i into the array z
-then return z
+console.log(countBy(1,10), [1,2,3,4,5,6,7,8,9,10]);
+console.log(countBy(2,5), [2,4,6,8,10]);
 */
 
-function countBy(x, n) {
-    let z = [];
-    for(let i = 1; i <= n; i++){
-        z.push(x * i);
-    };
-    return z;
-  }
+//declare variable and assign to arrow function
+//create array using Array() constructor
+//first parameter is the length of the array
+//second parameter is a callback function iterating over each element in the array and multipling the current index +1 by x
+const countBy = (x, n) => Array.from({length: n}, (element, index) => (index+1) * x);
