@@ -5,21 +5,16 @@ Write a function that accepts an integer n and a string s as parameters, and ret
 Examples (input -> output)
 6, "I"     -> "IIIIII"
 5, "Hello" -> "HelloHelloHelloHelloHello"
-P.R.E.P.
-parameters: an integer n and a string s
-return: a string of s repeated exactly n times
-examples:
-(input -> output)
-6, "I"     -> "IIIIII"
-5, "Hello" -> "HelloHelloHelloHelloHello"
-pseudocode:
-declare a function
-OR
-assign an anon function to a variable and use an arrow function
-set two parameters, n and s
-use string repeat() to append it to s and add n between the ()
+
+Will the parameter always be a number and a string?
+Will the return always be a string?
+
+console.log(repeatStr(3, "*"), "***");
+console.log(repeatStr(5, "#"), "#####");
+console.log(repeatStr(2, "ha "), "ha ha ");
 */
 
-function repeatStr(n, s){
-    return s.repeat(n);
-}
+//declare variable and assign to arrow function
+//set parameters
+// append repeat() method to the string and pass in the number into the method as an argument
+const repeatStr = (n, s) => s.repeat(n);
