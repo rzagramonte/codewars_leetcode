@@ -1,30 +1,17 @@
 /*
 Remove First and Last Character
 It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
-P.R.E.P.
-parameters: a string
-return: return the altered string
-examples: 
-eloquent => loquen
-country => ountr
-person => erso
-place => lac
-ooopss => oops
-pseudocode:
-declare a function
-OR
-assign an anon function to a variable and use an arrow function
-create parameter str
-split string into an array of substrings using split()
-remove the first element using shift()
-remove the last element using pop()
-join the substrings into one string using join()
-return modified string
+
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(removeChar('eloquent'), 'loquen');
+console.log(removeChar('country'), 'ountr');
+console.log(removeChar('person'), 'erso');
+console.log(removeChar('place'), 'lac');
+console.log(removeChar('ooopsss'), 'oopss');
 */
 
-function removeChar(str){
-    let arr = str.split('');
-    let firstOff = arr.shift();
-    let lastOff = arr.pop();
-    return arr.join('');
-}
+//declare variable and assign to arrow function
+//slice the string from the second character to the second to last character
+const removeChar = str => str.slice(1,-1);
