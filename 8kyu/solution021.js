@@ -2,20 +2,18 @@
 Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
 For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
-P.R.E.P.
-parameters: an array of numbers
-return: a number
-examples: For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
-pseudocode:
-declare a function
-set parameter for the array of numbers to numbers
-set squaredNums as a variable to hold the value of each element in the array squared
-use map to square each element
-use reduce method to reduce the new array to one value
-return the final value
+
+Will the parameter always be an array?
+Will the elements in the array all be numbers?
+Will the return always be a number?
+
+console.log(squareSum([1,2]), 5);
+console.log(squareSum([0, 3, 4, 5]), 50);
+console.log(squareSum([]), 0);
 */
 
-function squareSum(numbers){
- let squaredNums = numbers.map(num => num ** 2);
- return squaredNums.reduce((acc, c)=>acc + c, 0);
-}
+//declare variable and assign to arrow function
+//set parameter
+//map over array to square each number
+//reduce the array to one number by adding all the elements together
+const squareSum = numbers => numbers.map(num => num ** 2).reduce((acc, c)=>acc + c, 0);
