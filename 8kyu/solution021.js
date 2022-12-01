@@ -14,6 +14,5 @@ console.log(squareSum([]), 0);
 
 //declare variable and assign to arrow function
 //set parameter
-//map over array to square each number
 //reduce the array to one number by adding all the elements together
-const squareSum = numbers => numbers.map(num => num ** 2).reduce((acc, c)=>acc + c, 0);
+const squareSum = numbers => numbers.reduce((acc, c)=>acc + c ** 2, 0);
