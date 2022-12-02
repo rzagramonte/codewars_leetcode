@@ -20,27 +20,14 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.
 
-P.R.E.P.
-parameters: an array of numbers; can be negative or non-integer or not contain any numbers at all
-return: sum of the numbers
-examples:
-Input: [1, 5.2, 4, 0, -1]
-Output: 9.2
+Will the parameter always be an array?
+Will the return always be a number?
 
-Input: []
-Output: 0
-
-Input: [-2.398]
-Output: -2.398
-pseudocode:
-declare a function
-set 1 parameter for the array
-use reduce method
-set the initial value to 0
-return the sum
+console.log(sum([]), 0);
+console.log(sum([1, 5.2, 4, 0, -1]), 9.2);
 */
 
-function sum(numbers){
+const sum = numbers => {
     "use strict";
     return numbers.reduce((acc,c) => acc + c, 0);
 };
