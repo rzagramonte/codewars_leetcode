@@ -23,28 +23,15 @@ Examples (input -> output:
 * 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
 * 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
 
-P.R.E.P.
-parameters:
-an array of numbers, a
-a certain side of the box, which can be either 'L' or 'R', d
+Will the parameter always be an array and a string?
+Will the array's elements all be numbers?
+Will the string be either 'L' or 'R'?
 
-return: an array of numbers listed from least to greatest if gravity is r
-an array of numbers listed from greatest to least if gravity is l
-
-examples/edge cases:
-input -> output:
-* 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
-[5,8,7,3,2]->[2,3,5,7,8]
-
-* 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
-[8,6,4,5,9,0,1]->[9,8,6,5,4,1,0]
-pseudocode:
-create function declaration or use anon function
-if d = 'R' return min to max
-else return max to min
+console.log(flip('R', [3, 2, 1, 2]), [1, 2, 2, 3]);
+console.log(flip('L', [1, 4, 5, 3, 5]), [5, 5, 4, 3, 1]);
 */
 
-const flip=(d, a)=>{
-  //TODO
-   return (d === 'R' ? a.sort((a,b)=>a-b) : a.sort((a,b)=>b-a));
-};
+//declare variable and assign to arrow function
+//set parameters
+//if d equals "R" then sort the array in ascending order else sort the array in descending order
+const flip = (d, a) => d == 'R' ? a.sort((a,b)=>a-b) : a.sort((a,b)=>b-a);
