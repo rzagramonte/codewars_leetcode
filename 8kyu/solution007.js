@@ -14,7 +14,5 @@ console.log(lovefunc(0,0), false);
 
 //declare const variable and assign to arrow function
 //set parameters
-//if 1 is even and 2 is odd return true else return false
-//or
-//if 1 is odd and 2 is even return true else return false
-const lovefunc = (flower1, flower2) => flower1 % 2 === 0 && flower2 % 2 !== 0 || flower1 % 2 !== 0 && flower2 % 2 == 0;
+//return true or false the result of flower1 % 2 is not the result of flower2 % 2
+const lovefunc = (flower1, flower2) => flower1 % 2 !== flower2 % 2;
