@@ -6,24 +6,17 @@ Example(Input => Output):
 35231 => [1,3,2,5,3]
 0 => [0]
 
-parameters: a number n, non-negative
+Will the parameter always be a number?
+Will the return always be an array?
+Will the elements in the array always be numbers?
 
-return: a reverese array of numbers
-
-examples/edge cases:
-Example(Input => Output):
-35231 => [1,3,2,5,3]
-0 => [0]
-
-pseudocode:
-create a function declaration or assign an anon function value to a const variable
-convert number to string
-split
-reverse
-convert strings to numbers
-return array
+console.log(digitize(35231),[1,3,2,5,3]);
+console.log(digitize(0),[0]);
 */
 
-function digitize(n){
-    return n.toString().split('').reverse().map(Number);
-};
+//declare variable and assign to arrow function
+//convert n to string
+//split the string into an array of sub-strings
+//reverse the string in place
+//map over the array and convert each element to a number
+const digitize = n => n.toString().split('').reverse().map(Number);
