@@ -4,25 +4,19 @@ You get an array of numbers, return the sum of all of the positives ones.
 Example [1,-4,7,12] => 1 + 7 + 12 = 20
 
 Note: if there is nothing to sum, the sum is default to 0.
-P. - parameters: an array of numbers, positive or negative
-R. - return: summation of all the positive numbers
-E. - examples/edge cases:
-[1,-4,7,12] => 1 + 7 + 12 = 20
-[2,-3,8,10] => 2 + 8 + 10 = 20
-P. - pseudocode:
-create function declaration or assign an anon function value to a variable
-pass in an array labeled as arr
-setup loop to go through array of given length
-if any elements are greater than or equal to 0 then return the summation of those numbers
-else return 0
+
+Will the parameter always be an array?
+Will the elements in the array always be numbers?
+Will the return always be a number?
+
+console.log(positiveSum([1,2,3,4,5]),1);
+console.log(positiveSum([1,-2,3,4,5]),13);
+console.log(positiveSum([]),0);
+console.log(positiveSum([-1,-2,-3,-4,-5]),0);
+console.log(positiveSum([-1,2,3,4,-5]),9);
 */
 
-function positiveSum(arr) {
-    let total = 0;    
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] > 0) {                 
-        total += arr[i];
-      };
-    };
-    return total;
-  };
+//declare variable and assign to arrow function
+//filter elements that satisfy callback function of being equal to or greater than 0
+//add the remaining elements to one number
+const positiveSum = arr => arr.filter(e=>e>=0).reduce((a,c)=>a+c,0);
