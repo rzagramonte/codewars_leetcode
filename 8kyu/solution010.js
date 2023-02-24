@@ -6,28 +6,16 @@ setAlarm(true, true) -> false
 setAlarm(false, true) -> false
 setAlarm(false, false) -> false
 setAlarm(true, false) -> true
-P. - parameters: two parameters, employed and vacation
-R. - return: boolean of true or false
-E. - examples/edge cases:
-setAlarm(true, true) -> false
-setAlarm(false, true) -> false
-setAlarm(false, false) -> false
-setAlarm(true, false) -> true
-P. - pseudocode:
-create function expression or declare function
-pass in two arguments
-create if else statement
-return boolean of true or false
+
+Will the parameters always be two booleans?
+Will the return always be one boolean?
+
+console.log(setAlarm(true, true),  false);
+console.log(setAlarm(false,true),  false);
+console.log(setAlarm(true, false), true);
 */
 
-function setAlarm(employed, vacation){
-    if(employed && vacation){
-        return false;
-    }else if(!employed && vacation){
-        return false;
-    }else if (!employed && !vacation){
-        return false;
-    }else if (employed && !vacation){
-        return true;
-    };
-}
+//declare variable and assign to arrow function
+//set parameters
+//return true or false if employed is truthy and the negation of vacation is truthy
+const setAlarm = (employed, vacation) => employed && !vacation;
