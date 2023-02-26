@@ -7,22 +7,17 @@ Examples:
 14: -14
 -34: 34
 
-P. - parameters: integer or a floating-point number, positive or negavtive
-R. - return: opposite of the number, postive or negative
-E. - examples/edge cases: 
-1: -1
-14: -14
--34: 34
-P. - pseudocode: declare a function or assign a function value to a variable
-create one parameter for a number to be passed in
-create a variable to hold the parameter
-multiply and reasign the value in that variable to -1
-return the result
+Will the parameter always be a number?
+Will the return always be a number?
+
+console.log(opposite(4.25), -4.25);
+console.log(opposite(3.3333333), -3.3333333);
+console.log(opposite(-12525220.3325), 12525220.3325);
+console.log(opposite(-5), 5);
+console.log(opposite(1), -1);
+console.log(opposite(0), 0);
 */
 
-function opposite(number) {
-    //your code here
-    let result = number;
-    result *= -1;
-    return result;
-  }
+//declare const variable and assign to arrow function
+//multiply number by -1
+const opposite = number => -number;
