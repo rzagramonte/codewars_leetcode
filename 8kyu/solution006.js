@@ -12,20 +12,15 @@ Examples:
 "1405" --> 1405
 "-7" --> -7
 
-P. - parameters: string
-R. - return: a string
-E. - examples/edge cases:
-"1234" --> 1234
-"605"  --> 605
-"1405" --> 1405
-"-7" --> -7
-P. - pseudo code:
-create function; either declaration or as a value in a variable
-have the parameter pass in a string
-use a built in function that to return the string as a number 
+Will the parameter always be a string?
+Wil the return always be a number?
+
+console.log(stringToNumber("1234"),1234);
+console.log(stringToNumber("605"), 605);
+console.log(stringToNumber("1405"),1405);
+console.log(stringToNumber("-7"),  -7);
 */
 
-const stringToNumber = function(str){
-    // put your code here
-    return Number(str);
-  }
+//declare const variable and assign to arrow function
+//convert string to number using unary plus operator
+const stringToNumber = str => +str;
