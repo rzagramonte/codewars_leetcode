@@ -1,28 +1,19 @@
-// Multiply
-// This code does not execute properly. Try to figure out why.
+/*Multiply
+This code does not execute properly. Try to figure out why.
 
-// P.R.E.P.
-// P: parameters - two numbers of any kind a and b
-// R: return - product of two numbers
-// E: examples - 
-// 1 * 1 = 1
-// 1 * 2 = 2
-// 1 * 3 = 3
-// 1 * 4 = 4
-// 1 * 5 = 5
-// 1 * 6 = 6
-// 1 * 7 = 7
-// 1 * 8 = 8
-// 1 * 9 = 9
-// 1 * 10 = 10
-// 1 * 11 = 11
-// 1 * 12 = 12
-//P: pseudo code
-// create function that passes in two numbers
-// the numbers are multiplied
-// the product is returned
+Will the parameters always be two numbers?
+Will the numbers always be integers or floating point numbers?
+Will the return be a number?
+Will the number be an integer or floating point number?
 
-function multiply(a, b){ // create function that passes in two numbers
-    return a * b// the product of the two multiplied numbers is returned
-  }
+console.log(multiply(1,1), 1);
+console.log(multiply(2,1), 2);
+console.log(multiply(2,2), 4);
+console.log(multiply(3,5), 15);
+*/
+
+//declare const variable and assign it to an arrow function
+//set parameters
+//return a times b
+const multiply = (a, b) => a * b;
   
