@@ -26,15 +26,12 @@ const giveMeFive = obj => {
     //create for..in loop
     for(let key in obj){
         //if length of key is equal to 5 or if length of value is equal to 5
-        if(key.length == 5 || obj[key].length == 5){
-            //if the length of the key is equal to 5, then push to array
-            if (key.length == 5){
-                arr.push(key);
-            };
-            //if the length of the value is equal to 5, then push to array
-            if(obj[key].length == 5){
-                arr.push(obj[key]);
-            };
+        if (key.length == 5){
+            arr.push(key);
+        };
+        //if the length of the value is equal to 5, then push to array
+        if(obj[key].length == 5){
+            arr.push(obj[key]);
         };
     };
     //return array
