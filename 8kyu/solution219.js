@@ -31,6 +31,8 @@ const guessBlue = (blueStart, redStart, bluePulled, redPulled) => {
 let redRemain = redStart - redPulled;
 //declare a variable blueRemain and assign it to blueStart - bluePulled
 let blueRemain = blueStart - bluePulled;
-//return blueRemain divided by blueRemain + redRemain
-return blueRemain / (blueRemain + redRemain);
+//declare variable allRemain and assign to blueRemain + redRemain
+let allRemain = blueRemain + redRemain;
+//return blueRemain divided by allRemain
+return blueRemain / allRemain;
 };
