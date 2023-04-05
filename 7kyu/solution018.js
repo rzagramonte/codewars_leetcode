@@ -23,16 +23,8 @@ console.log(number(["a", "b", "c"]), ["1: a", "2: b", "3: c"]);
 
 //declare a variable named number and assign it to an arrow function
 //set a parameter named array for the function
-var number = (array) => {
-    //your awesome code here
-    //inside the function
-    //declare a variable named results and assign it to an empty array
-    let results = [];
-    //create a for loop to iterate over the array passed into the function from the beginning of the array to its end
-    for(let i = 0; i < array.length; i++){
-        //for each loop: push into the results a string defined as "i+1: element"
-      results.push(`${i+1}: ${array[i]}`);
-    };
-    //return results
-    return results;
-  };
+//your awesome code here
+//inside the function
+//return array appended to the map() method
+//callback function will iterate over each element and return "i+1: element"
+var number = array => array.map((line,i)=>`${i+1}: ${line}`);
