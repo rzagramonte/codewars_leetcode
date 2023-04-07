@@ -19,7 +19,4 @@ set three parameters
 if fuelLeft * mpg >= distanceToPump return true else return false
 */
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-    // TODO
-    return fuelLeft * mpg >= distanceToPump;
-  };
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => fuelLeft * mpg >= distanceToPump;
