@@ -14,54 +14,19 @@ Notes:
 there are 10 matches in the championship
 0 <= x <= 4
 0 <= y <= 4
+
+Will the parameter always be an array?
+Will the elements in the array always be strings?
+Will the return always be a number?
+
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]) , 30);
+console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]) , 10);
+console.log(points(["0:1","0:2","0:3","0:4","1:2","1:3","1:4","2:3","2:4","3:4"]) , 0);
+console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]) , 1);
+console.log(points(["1:0","2:0","3:0","4:4","2:2","3:3","1:4","2:3","2:4","3:4"]) , 12);
 */
 
-/*
-P.R.E.P.
-paramters: array
-return: a number
-example:
-["3:1", "2:2", "0:1"] => 4
-pseudocode: 
-declare function
-set parameter
-declare variable total and assign it to 0
-map over the array, games
-if game[0] === game[2] add 1 and reassign total
-if game[0] > game[2] add 3 and reassign total
-return total
-*/
-
-function points(games) {
-    // your code here
-    let total = 0;
-    games.map(game => {
-      if (game[0] === game[2]) {
-        total += 1;
-      } else if (game[0] > game[2]) {
-        total += 3;
-      }
-    });
-    return total;
-  }
-
-
-/*
-P.R.E.P.
-paramters: array
-return: a number
-example:
-["3:1", "2:2", "0:1"] => 4
-pseudocode: 
-declare function
-set parameter
-use the reduce method to go over each element in the array
-use output and current for parameters to reduce()
-return output and reassign/add a number based on several conditions:
-if current[0] === current[2] add 1 and reassign output
-if current[0] > current[2] add 3 and reassign output
-else add 0 and reassign output
-*/
-const points=games=>games.reduce((output,current)=>{
-    return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
-  },0)
+//declare variable and assign to arrow function
+//set parameter
+//reduce to one value
+const points = games => games.reduce((a,c)=>a += c[0]>c[2] ? 3 : c[0]===c[2] ? 1 : 0,0)
