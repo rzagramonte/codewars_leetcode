@@ -8,22 +8,16 @@ case	return
 name equals owner	'Hello boss'
 otherwise	'Hello guest'
 
-P.R.E.P.
-parameters: two strings
-return: one string
-examples:
-input => output
-(James, James) => 'Hello boss'
-(Sam, Robert) => 'Hello guest'
-pseudocode:
-declare function
-set parameters
-create if else statement
-if name === owner return 'Hello boss'
-else return 'Hello guest'
+Will the parameters always be two strings?
+Will the return always be one string?
+
+console.log(greet('Daniel', 'Daniel'), 'Hello boss');
+console.log(greet('Greg', 'Daniel'), 'Hello guest');
 */
 
-function greet (name, owner) {
-    // Add code here
-    return name === owner ? 'Hello boss' : 'Hello guest';
-  }
+
+//declare variable and assign to arrow function
+//set parameters
+//if name and owner are equal in value and type return 'Hello boss'
+//else return 'Hello guest'
+const greet = (name, owner) => name === owner ? 'Hello boss' : 'Hello guest';
