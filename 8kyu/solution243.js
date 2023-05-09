@@ -23,6 +23,7 @@ console.log(bonusTime(67890, true), '£678900');
 
 //declare const variable and assign to arrow function
 //set parameters
-//is bonus truthy? if so, return salary times 10
-//else return salary
-const bonusTime = (salary, bonus) => bonus ? `\u00A3${salary * 10}` : `\u00A3${salary}`;
+//return string using template literaly and multiply salary by the following:
+//is bonus truthy? if so, return 10
+//else return 1
+const bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1)}`;
