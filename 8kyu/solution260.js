@@ -24,19 +24,7 @@ console.log(twoHighest([15, 20, 20, 17]), [20, 17]);
 */
 
 //declare const variable, assign to arrow function, and set parameter
-const twoHighest = arr => {
-    if (arr.length == 0 || arr.length == 1) {//if length of arr is 0 or 1
-        return arr; //return arr
-    };
-    //declare variable and assign to an array of one value being the max value found in arr
-    let maxTwo = [Math.max(...arr)];
-    arr.splice(arr.indexOf(Math.max(...arr)),1);//delete the element found in arr that is the max value
-    
-    if(maxTwo[0] == Math.max(...arr)){//if the element found in maxTwo is equal to the current max value in arr
-      arr.splice(arr.indexOf(Math.max(...arr)),1); //delete it
-    };
-    //push the current max value in arr to maxTwo
-    maxTwo.push(Math.max(...arr));
-    //return maxTwo
-    return maxTwo;
-  };
+//create new Set object and pass in arr into the constructo while also spreading the values into an array using the spread syntax
+//sort the array in descending order
+//slice the array to include the first two elements
+const twoHighest = arr => [...new Set(arr)].sort((a, b) => b - a).slice(0, 2);
