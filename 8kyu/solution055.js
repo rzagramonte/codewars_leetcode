@@ -20,10 +20,25 @@ in the body of the for loop: push i into an empty array
 return newArr
 */
 
-const reverseSeq = n => {
+function reverseSeq(n) {
     let newArr = [];
     for(let i = n; i > 0; i--){
       newArr.push(i);
     }
     return newArr;
-  };
+  }
+
+//refactored code:
+
+/*
+Will the parameter always be a number?
+Will the return always be an array?
+Will the elements of the returned array always be numbers?
+Will the numbers in the returned array always be in descending order?
+
+console.log(reverseSeq(5), [5,4,3,2,1]);
+console.log(reverseSeq(7), [7,6,5,4,3,2,1]);
+*/
+
+//create new array with length
+const reverseSeq = n => Array.from({length:n},(e,i)=>e=i+1).reverse();
