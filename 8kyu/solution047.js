@@ -43,3 +43,29 @@ function basicOp(operation, value1, value2){
         break;
   };
 }
+
+//refactored code:
+
+/*
+Will the parameters always be a string representation of the 4 arthmetic operators and two numbers?
+Will the return always be a number?
+
+examples:
+console.log(basicOp('+', 4, 7), 11)
+console.log(basicOp('-', 15, 18), -3)
+console.log(basicOp('*', 5, 5), 25)
+console.log(basicOp('/', 49, 7), 7)
+*/
+
+//create switch case statement to go through each operator in the form of a string
+//return the evaluated numbers
+
+const basicOp = (operation, value1, value2) => {
+  // Code
+  switch(operation){
+    case '+': return value1 + value2;
+    case '-': return value1 - value2;
+    case '*': return value1 * value2;
+    case '/': return value1 / value2;
+  };
+};
