@@ -32,3 +32,17 @@ function monkeyCount(n) {
     };
     return monkeys;
     }
+
+//refactored code:
+/*
+Will the parameter always be a number?
+Will the return always be an array?
+Will the elements of the returned array always be numbers?
+
+console.log(monkeyCount(10), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(monkeyCount(1), [1]);
+*/
+
+//create new array with n as the length
+//map over array adding 1 to index of each slot
+const monkeyCount = n => Array.from({length:n},(e,i)=>i+1);
