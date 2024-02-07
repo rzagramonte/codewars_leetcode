@@ -55,3 +55,28 @@ function whatday(num) {
             break;
     }
   }
+
+//refactored code:
+
+/*
+Will the parameter always be a number?
+Will the return always be a string?
+
+console.log(whatday(1),'Sunday');
+console.log(whatday(5),'Thursday');
+console.log(whatday(3),'Tuesday');
+*/
+
+// use switch-case statement
+const whatday = (num) => {
+    switch (num){
+        case 1: return 'Sunday';
+        case 2: return 'Monday';
+        case 3: return 'Tuesday';
+        case 4: return 'Wednesday';
+        case 5: return 'Thursday';
+        case 6: return 'Friday';
+        case 7: return 'Saturday';
+        default: return 'Wrong, please enter a number between 1 and 7';
+    };  
+};
