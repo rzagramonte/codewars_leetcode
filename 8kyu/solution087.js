@@ -27,3 +27,17 @@ function sumMix(x){
     }
     return newArr.reduce((acc,c)=> acc+c,0);
 }
+
+//refactored code:
+/*
+Will the parameter always be an array?
+Will the elements of the input array be a mix of number or strings?
+Will the return always be one number?
+
+console.log(sumMix([9, 3, '7', '3']), 22);
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 4);
+*/
+
+//reduce array to one number
+//convert c to num
+const sumMix = x => x.reduce((acc,c) => acc + +c, 0);
