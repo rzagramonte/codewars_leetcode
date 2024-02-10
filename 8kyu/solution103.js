@@ -38,3 +38,17 @@ function checkForFactor (base, factor) {
     // code here
     return base % factor === 0 ? true : false;
   }
+
+
+/*
+Will the parameters always be two numbers?
+Will the return always be a boolean of true or false?
+
+console.log(checkForFactor(10,2),true);
+console.log(checkForFactor(9,2),false);
+console.log(checkForFactor(63,7),true);
+console.log(checkForFactor(653,7),false);
+*/
+
+//use negation operator and modulus
+const checkForFactor = (base, factor) => !(base % factor);
