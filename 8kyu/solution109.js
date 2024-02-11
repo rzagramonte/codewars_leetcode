@@ -31,3 +31,16 @@ function testEven(n) {
     //Your awesome code here!
   return n % 2 === 0;
 }
+
+/*
+Will the parameter always be a number?
+Will the return always be a boolean of true or false?
+
+console.log(testEven(0),true);
+console.log(testEven(0.5),false);
+console.log(testEven(1),false);
+console.log(testEven(2),true);
+console.log(testEven(-4),true);
+*/
+
+const testEven = n => !(n % 2);
