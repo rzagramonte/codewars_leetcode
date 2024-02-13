@@ -78,4 +78,4 @@ const howManydays = month => {
     case 10: return 31;
     case 11: return 30;
     case 12: return 31;
-  };
+  }};
