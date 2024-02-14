@@ -44,3 +44,14 @@ function defineSuit(card) {
             break;
     }
   }
+
+//refactored code:
+const defineSuit = card => {
+    let cardSuit = card[card.length-1];
+    switch(cardSuit){
+      case '♣': return 'clubs';
+      case '♦': return 'diamonds';
+      case '♥': return 'hearts';
+      case '♠': return 'spades';
+    };
+  };
