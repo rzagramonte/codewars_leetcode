@@ -31,3 +31,6 @@ function trueOrFalse(val){
       return 'false';
     };
 }
+
+//refactored code:
+const trueOrFalse = val => `${Boolean(val)}`;
