@@ -59,3 +59,36 @@ function getDrinkByProfession(param){
               break;
       }
   }
+
+//refactored code:
+
+/*
+Will the parameter always be a string?
+Can there be upper and lowercase throughout the string?
+Will the return always be a string?
+Will the strings only be what is contained in the output list?
+
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars");
+console.log(getDrinkByProfession("rapper"), "Cristal");
+console.log(getDrinkByProfession("pundit"), "Beer");
+console.log(getDrinkByProfession("Pug"), "Beer");
+*/
+
+//convert string to all lowercase
+//swap out string for correct string output
+const getDrinkByProfession = param => {
+    param = param.toLowerCase();
+      switch (paramLowercase) {
+          case "jabroni": return "Patron Tequila";
+          case "school counselor": return "Anything with Alcohol";
+          case "programmer": return "Hipster Craft Beer";
+          case "bike gang member": return "Moonshine";
+          case "politician": return "Your tax dollars";
+          case "rapper": return "Cristal";
+          default: return "Beer";
+      };
+};
