@@ -23,3 +23,19 @@ function add(a, b){
     //
   return a == b ? true : false;
 }
+
+//refactored code:
+/*
+Can the parameter be either string or number?
+Will the return always be a boolean of either true or false?
+
+console.log(add('1', 1), true);
+console.log(add(1, '1'), true);
+console.log(add(1, '0'), false);
+console.log(add('11', 11), true);
+console.log(add(12, 12), true);
+console.log(add(120, '021'), false);
+*/
+
+//is a equal in value to b?
+const add = (a, b) => a == b;
