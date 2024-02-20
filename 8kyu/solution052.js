@@ -34,3 +34,17 @@ function fakeBin(x){
     });
     return newArr.join('');
 }
+
+//refactored code:
+
+/*
+Will the parameter always be a string?
+Will the return always be a string where the characters are either 0, 1, or both?
+
+console.log(fakeBin('45385593107843568'), '01011110001100111');
+console.log(fakeBin('509321967506747'), '101000111101101');
+console.log(fakeBin('366058562030849490134388085'), '011011110000101010000011011');
+*/
+
+
+const fakeBin = x => Array.from(x,c=> +c < 5 ? '0' : '1').join('');
