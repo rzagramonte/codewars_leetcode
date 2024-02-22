@@ -32,3 +32,18 @@ function first(arr, n = 1) {//set n default value to 1
     //else append the slice method to arr and pass in 0 as the first argument and n as the second argument
     return n == 0 ? [] : arr.slice(0,n);
   }
+
+//refactored code:
+
+/*
+Will the parameter always be an array and a number?
+Will the elements of the input array be of any data type?
+
+const arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(first([...arr]   ), ['a']);
+console.log(first([...arr], 2), ['a', 'b']);
+
+*/
+
+//is n truthy? then return sub array starting at the start of the array and ending at 1 else return an empty array
+const first = (arr, n = 1) => n ? arr.slice(0,n): [];
