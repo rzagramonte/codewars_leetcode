@@ -1,5 +1,5 @@
 /*
-Odd-Even String Sor
+Odd-Even String Sort
 
 Given a string s. You have to return another string such that even-indexed and odd-indexed characters of s are grouped and groups are space-separated (see sample below)
 
@@ -44,3 +44,15 @@ const sortMyString = S => {
     //return even odd joined into string with one space between even and odd
     return `${even.join('')} ${odd.join('')}`;
   };
+
+//refactored code:
+
+/*
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(sortMyString("CodeWars"), "CdWr oeas");
+console.log(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
+*/
+
+const sortMyString = S => `${[...S].filter((e,i)=>!(i%2)).join('')} ${[...S].filter((e,i)=>i%2).join('')}`;
