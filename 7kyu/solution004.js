@@ -34,3 +34,19 @@ function disemvowel(str) {
       .replaceAll('O','')
       .replaceAll('U','');
   }
+
+//refactored code:
+
+/*
+Will the parameter always be a string with any number of vowels in either casing?
+Will the vowels only be aeiou?
+Will the return always be a string?
+Will the returned string contain no vowels whatsoever?
+
+console.log(disemvowel("This website is for losers LOL!"), "Ths wbst s fr lsrs LL!");
+console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"), "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd");
+console.log(disemvowel("What are you, a communist?"), "Wht r y,  cmmnst?");
+*/
+
+//replace all vowels upper or lowercase to ''
+const disemvowel = str => str.replace(/[aeiou]/gi,'');
