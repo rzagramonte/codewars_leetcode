@@ -31,3 +31,21 @@ function shortcut (string) {
     .replaceAll('o','')
     .replaceAll('u','');
   }
+
+//refactored code:
+
+/*
+Will the parameters always be one string?
+Will the return always be a string containing only consonants and in all lowercase?
+
+console.log(shortcut ("hello"),"hll")
+console.log(shortcut ("codewars"),"cdwrs")
+console.log(shortcut ("goodbye"),"gdby")
+console.log(shortcut ("HELLO"),"HELLO")
+*/
+
+//declare function and set parameter
+//use return keyword to return the string chained to the replace method using dot notation
+//pattern should be 'a','e','i','o', and 'u'
+//replacement should be ''
+const shortcut = string => string.replace(/[aeiou]/gi, "");
