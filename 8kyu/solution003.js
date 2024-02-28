@@ -13,14 +13,20 @@ console.log(powersOfTwo(4), [1, 2, 4, 8, 16]);
 
 //declare const variable and assign it to an arrow function
 //set parameter
-const powersOfTwo = n => {
-  //declare variable named results and assign it to an empty array
-    let results = [];
-    //create for loop
-    for (let i = 0; i <= n; i++) {
-      //push 2 to the i-th power into results
-      results.push(Math.pow(2, i));
-    }
-    //return results
-    return results;
-  };
+//const powersOfTwo = n => {
+//   //declare variable named results and assign it to an empty array
+//     let results = [];
+//     //create for loop
+//     for (let i = 0; i <= n; i++) {
+//       //push 2 to the i-th power into results
+//       results.push(Math.pow(2, i));
+//     }
+//     //return results
+//     return results;
+//   };
+
+//refactored code:
+//create new array
+//map over new array
+//2^i, i == index
+const powersOfTwo = n =>  Array.from({length:n+1},(e,i)=>2**i);
