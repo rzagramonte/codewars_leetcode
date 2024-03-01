@@ -23,4 +23,8 @@ console.log(isDivisible(48,3,4),true);
 //declare variable and assign to arrow function
 //set parameters
 //does n modulus x equal in value to 0 and does n modulus y equal in value to 0 ?
-const isDivisible = (n, x, y) => n % x == 0 && n % y == 0;
+//const isDivisible = (n, x, y) => n % x == 0 && n % y == 0;
+
+//refactored code:
+
+const isDivisible = (n, x, y) => !(n % x) && !(n % y);
