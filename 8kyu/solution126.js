@@ -23,6 +23,7 @@ console.log(arr(3), [0,1,2])
 console.log(arr(9), [0,1,2,3,4,5,6,7,8])
 */
 
+/*
 const arr = N => {
     //creating a variable and assigning it to an empty array
     let finalArr = [];
@@ -37,3 +38,11 @@ const arr = N => {
     //return finalArr
     return finalArr;
 };
+*/
+
+
+/*
+return new array with length
+map over new array and return index
+*/
+const arr = length => Array.from({length},(e,i)=>i);
