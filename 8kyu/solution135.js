@@ -40,3 +40,12 @@ function isPythagoreanTriple(integers) {
         return false;
     };
   }
+
+//refactored code:
+const isPythagoreanTriple = integers => {
+  integers = integers.sort((a, b) => a - b);
+  let a = integers[0];
+  let b = integers[1];
+  let c = integers[2];
+  return c**2 == a**2 + b**2
+};
