@@ -38,3 +38,8 @@ function contamination(text, char){
     //return textArr joined by character
     return textArr.join('');
   }
+
+//refactored code:
+//create new array in the size of text and fill it with char
+//return string
+const contamination = (text, char) => Array.from({length:text.length},e=>char).join('');
