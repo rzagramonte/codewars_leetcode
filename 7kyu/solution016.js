@@ -26,6 +26,7 @@ console.log(missingWord([12, 4, 6], "Good Morning"), "No mission today");
 
 //declare const variable and assign to arrow function
 //set parameters
+/*
 const missingWord = (nums, str) => {
     // Jenny needs your help...
     //declare variable and assign to str where all spaces are removed and the string is forced to all lowercase
@@ -36,3 +37,15 @@ const missingWord = (nums, str) => {
     //else return the characters in those positions with no spacing using template literal
      return revisedStr[sortedNums[0]] === undefined || revisedStr[sortedNums[1]] === undefined || revisedStr[sortedNums[2]] === undefined ? "No mission today" : `${revisedStr[sortedNums[0]]}${revisedStr[sortedNums[1]]}${revisedStr[sortedNums[2]]}`;
   };
+*/
+
+//refactored code:
+//remove all spaces from str and convert to lowercase
+//sort nums ascendingly
+//in str, if the character at the index of the number in the first, second, or third position in nums is falsy, then return "No mission today"
+//else return the characters in those positions with no spacing using template literal
+const missingWord = (nums, str) => {
+    str = str.replaceAll(' ','').toLowerCase();
+    nums.sort((a,b)=>a-b);
+    return !(str[nums[0]]) || !(str[nums[1]]) || !(str[nums[2]]) ? "No mission today" : `${str[nums[0]]}${str[nums[1]]}${str[nums[2]]}`;
+    };
