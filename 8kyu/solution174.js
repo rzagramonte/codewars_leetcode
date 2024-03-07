@@ -23,3 +23,8 @@ function findMultiples(integer, limit) {
     }
     return result;
   }
+
+//refactored code:
+//return new array where the length is limit divided by integer rounded down
+//for each slot, multiply integer times index plus 1
+const findMultiples = (integer, limit) => Array.from({length:Math.floor(limit/integer)},(n,i)=>integer * (i+1));
