@@ -53,3 +53,21 @@ function finalGrade (exam, projects) {
         return 0;
     }
   }
+
+//refactored code:
+/*
+Will the parameter always be two numbers?
+Will the first number always be from 0 to 100?
+Will the second number always be greater than or equal to 0?
+Will the return always be one number of 100, 90, 75, or 0?
+
+console.log(finalGrade(100, 12), 100);
+console.log(finalGrade(85, 5), 90);
+console.log(finalGrade(10, 15), 100);
+console.log(finalGrade(55, 3), 75);
+console.log(finalGrade(55, 0), 0);
+console.log(finalGrade(20, 2), 0);
+
+do the exam and projects values fit into specified ranges? then return the appropriate number for each scenario
+*/
+const finalGrade = (exam, projects) => exam > 90 || projects > 10 ? 100 : exam > 75 && projects >= 5 ? 90 : exam > 50 && projects >= 2 ? 75 : 0;
