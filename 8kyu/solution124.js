@@ -39,3 +39,25 @@ function well(x){
         return 'Fail!'
     }
 }
+
+//refactored code:
+
+/*
+Will the argument always be an array?
+Will the elements of the input array always be a string of 'good' or 'bad'?
+Will the strings always be lowercase?
+Will the return always be 'Publish!' or 'I smell a series!' or 'Fail!'?
+
+console.log(well(['bad','bad','bad']),'Fail!')
+console.log(well(['good','bad','bad','bad','bad']), 'Publish!')
+console.log(well(['good','bad','bad','bad','bad','good','bad','bad','good']), 'I smell a series!')
+*/
+
+//filter out 'bad' from x and return the length of the modified array
+//if x is less than or equal to 2 and truthy, return 'Publish!'
+//else if x is greater than 2, return 'I smell a series', else return 'Fail!'
+const well = x => {
+    x = x.filter(e => e == 'good').length;
+    return x <= 2 && x ? 'Publish!'
+         : x > 2 ? 'I smell a series!' : 'Fail!';
+};
