@@ -50,3 +50,16 @@ function DNAStrand(dna){
     //return nucleotideBases attached using dot notation to the join method passing in '' as a parameter
     return nucleotideBases.join('');
   }
+
+
+//refactored code:
+/*
+Will the parameter always be a string in all caps?
+Will the return always be a string in all caps?
+console.log(DNAStrand("AAAA"),"TTTT")
+console.log(DNAStrand("ATTGC"),"TAACG")
+console.log(DNAStrand("GTAT"),"CATA")
+*/
+
+//replace A T C G with their complementary nucleotide base
+const DNAStrand = dna => dna.replace(/[ATCG]/g, nb => nb == 'A' ? 'T' : nb == 'T' ? 'A' : nb == 'G' ? 'C' : 'G');
