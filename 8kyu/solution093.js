@@ -50,3 +50,24 @@ String.prototype.toAlternatingCase = function () {
     }
     return newStr;
   }
+
+//refactored code:
+/*
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log("hello world".toAlternatingCase(), "HELLO WORLD");
+console.log("HELLO WORLD".toAlternatingCase(), "hello world");
+console.log("hello WORLD".toAlternatingCase(), "HELLO world");
+console.log("HeLLo WoRLD".toAlternatingCase(), "hEllO wOrld");
+console.log("12345".toAlternatingCase(), "12345");
+console.log("1a2b3c4d5e".toAlternatingCase(), "1A2B3C4D5E");
+console.log("String.prototype.toAlternatingCase".toAlternatingCase(), "sTRING.PROTOTYPE.TOaLTERNATINGcASE");
+console.log("Hello World".toAlternatingCase().toAlternatingCase(), "Hello World");
+
+replace all upper and lowercase letter with opposite
+*/
+
+String.prototype.toAlternatingCase = function () {
+  return this.replace(/[a-z]/gi,l=>l == l.toUpperCase() ? l.toLowerCase() : l.toUpperCase())
+};
