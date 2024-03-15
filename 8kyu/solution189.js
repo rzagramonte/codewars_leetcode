@@ -23,3 +23,7 @@ function aspectRatio(x,y){
     //return results
     return results;
   }
+
+//refactored code:
+//return x as 16 times y divided by 9 rounded up and y respectively in an array 
+const aspectRatio = (x,y) => [Math.ceil(16 * y / 9),y];
