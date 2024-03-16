@@ -15,7 +15,7 @@ Round the result to 2 decimal places.
 If null value given then return -1
 
 Will the parameter always be a number?
-Will the return always be a number rounded to 2 decimal points?
+Will the return always be a number rounded to 2 decimal places?
 
 console.log(excludingVatPrice(230), 200.00);
 console.log(excludingVatPrice(123), 106.96);
@@ -31,3 +31,9 @@ function excludingVatPrice(price){
     //return this as a number and rounded to two decimal points using the number command and the toFixed() method
     return price === null ? -1 : Number((price / (1.15)).toFixed(2));
   }
+
+//refactord code:
+//return price without vat
+//if price is null, then return -1
+//else return price divided by 1.15 rounded to two decimal places
+const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed(2);
