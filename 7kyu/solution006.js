@@ -27,3 +27,8 @@ function descendingOrder(n){
     //use return keyword, number command, toString, split, sort, and join method to return number in descending order
     return Number(n.toString().split('').sort((a,b)=>b-a).join(''));
   }
+
+//refactored code:
+//spread the number converted to a string into an array
+//sort in descending order and change back to number
+const descendingOrder = n => +[...n.toString()].sort((a,b)=>b-a).join('');
