@@ -26,3 +26,7 @@ function shortenToDate(longDate) {
     //return the first element of splitDate
     return splitDate[0];
   }
+
+//refactored code:
+//split longDate "," and return the first element
+const shortenToDate = longDate => longDate.split(',')[0];
