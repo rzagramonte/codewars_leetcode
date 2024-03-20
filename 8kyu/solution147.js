@@ -36,3 +36,12 @@ function getRealFloor(n) {
     // default return n
     return (n == 0 || n == 1) ? 0 : (n > 1 && n < 13) ? n-1 : (n >= 14) ? n-2 : n;
   }
+
+//refactored code;
+//declare function and set parameter
+// use return keyword and ternary/conditional operator
+// if n is equal in value to 0 or 1 return 0
+// if n is greater than 1 and less than 13 return n-1
+// if n is greater than or equal to 14 return n-2
+// default return n
+const getRealFloor = n =>  !n || n == 1 ? 0 : n > 1 && n < 13 ? n-1 : n >= 14 ? n-2 : n;
