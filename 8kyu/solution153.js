@@ -36,3 +36,20 @@ function remove (string) {
      //return the modified array as a string joined by '' using the join() method
     return stringArr.join('');
   }
+
+//refactored code:
+/*
+Will the parameter always be a string?
+Will the return always be a string?
+
+console.log(remove("Hi!"),"Hi");
+console.log(remove("Hi!!!"),"Hi!!");
+console.log(remove("!Hi"),"!Hi");
+console.log(remove("!Hi!"),"!Hi");
+console.log(remove("Hi! Hi!"),"Hi! Hi");
+console.log(remove("Hi"),"Hi");
+
+replace all '!' at the end of the string with ''
+*/
+
+const remove = string => string.replace(/\!$/g, '');
