@@ -47,3 +47,30 @@ function sameCase(a, b){
       return 0;
     }
   }
+
+//refactored code:
+/*
+Will the parameters always be two strings?
+Will the return always be a number of either 0, -1, 1
+
+console.log(sameCase('C', 'B'), 1)
+console.log(sameCase('b', 'a'), 1)
+console.log(sameCase('d', 'd'), 1)
+console.log(sameCase('A', 's'), 0)
+console.log(sameCase('c', 'B'), 0)
+console.log(sameCase('b', 'Z'), 0)
+console.log(sameCase('\t', 'Z'), -1)
+console.log(sameCase('H', ':'), -1)
+
+if either character is not a letter, return -1
+if lowercase a and uppercase a are equal in value or if lowercase b and uppercase b are equal in value then return -1
+if both characters are the same case, return 1
+if lowercase a equals in value to a and if lowercase b equals in value to b or if uppercase a equals in value to a and if uppercase b  equals in value to b then return 1
+else return 0
+*/
+
+   
+
+const sameCase = (a, b) => {
+  return (a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()) ? -1 : (a.toLowerCase() === a && b.toLowerCase() === b || a.toUpperCase() === a && b.toUpperCase() === b) ? 1 : 0
+};
