@@ -17,6 +17,7 @@ Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
 Input: ["sheep", "sheep", "wolf"]
 Output: "Pls go away and stop eating my sheep"
 
+old:
 P.R.E.P.
 paramters: an array
 return: a string
@@ -35,8 +36,6 @@ i++
 create if else statement
 if i == queue.length-1 && queue[i] === "wolf" then return "Pls go away and stop eating my sheep"
 else if(queue[i] === 'wolf') let n = queue.length - (i + 1) return "Oi! Sheep number ${n}! You are about to be eaten by a wolf!"
-*/
-
 function warnTheSheep(queue) {
     for(let i = 0; i<queue.length; i++){
         if (i==queue.length-1 && queue[i] === 'wolf'){
@@ -47,3 +46,26 @@ function warnTheSheep(queue) {
         }
     }
 }
+
+new:
+
+Will the argument passed into the function always be an array of strings?
+Will the return always be a string?
+
+console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]),"Oi! Sheep number 2! You are about to be eaten by a wolf!");
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]),"Oi! Sheep number 5! You are about to be eaten by a wolf!");
+console.log(warnTheSheep(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"]),"Oi! Sheep number 6! You are about to be eaten by a wolf!");
+console.log(warnTheSheep(["sheep", "wolf", "sheep"]),"Oi! Sheep number 1! You are about to be eaten by a wolf!");
+console.log(warnTheSheep(["wolf"]),"Pls go away and stop eating my sheep");
+console.log(warnTheSheep(["sheep", "sheep", "wolf"]),"Pls go away and stop eating my sheep");
+
+TODO:
+loop through array and return specific string (breaking out of the loop) based on the position of "wolf"
+*/
+
+const warnTheSheep = q => {
+    for(const a of q){
+      if (q.indexOf(a) == q.length-1 && a == 'wolf') return "Pls go away and stop eating my sheep";
+      if (a == 'wolf') return `Oi! Sheep number ${q.length - (q.indexOf(a) + 1)}! You are about to be eaten by a wolf!`;
+      };
+  };
