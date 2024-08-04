@@ -19,11 +19,21 @@ pseudocode:
 declare function
 set parameter
 return string appended to split() with its argument as ' '
-*/
-
 function stringToArray(string){
 
 	// code code code
     return string.split(' ');
 
 }
+new:
+Will the argument passed into the function always be a string?
+Will the return always be an array of strings?
+
+console.log(stringToArray("Robin Singh"), ["Robin", "Singh"])
+console.log(stringToArray("I love arrays they are my favorite"), ["I", "love", "arrays", "they", "are", "my", "favorite"])
+
+TODO:
+split string by whitespace returning an array of words
+*/
+
+const stringToArray= s => s.split(' ');
