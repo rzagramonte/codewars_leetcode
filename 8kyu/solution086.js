@@ -14,6 +14,8 @@ If there is enough space, return 0, and if there isn't, return the number of pas
 Usage Examples:
 cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
 cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+old:
 P.R.E.P.
 parameter: three numbers
 return: one number
@@ -25,9 +27,22 @@ declare function
 set parameter
 create if else statement using ternary operator
 if wait > cap-on return wait - cap - on else return 0
-*/
+
 
 function enough(cap, on, wait) {
     // your code here
     return wait > cap-on ? wait - (cap - on) : 0
   }
+
+new:
+Will the arguments passed into the function always be three numbers?
+Will the return always be a number?
+
+console.log(enough(10, 5, 5), 0);
+console.log(enough(100, 60, 50), 10);
+console.log(enough(20, 5, 5), 0);
+
+is w greater than c-0 ? then return w minus c minus o else return 0
+*/
+
+const enough = (c, o, w) => w > c - o ? w - (c - o) : 0;
