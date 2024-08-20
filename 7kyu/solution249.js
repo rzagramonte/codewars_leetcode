@@ -35,6 +35,6 @@ if num is less than 0 return 0 else return num
 
 const checkExam = (a1, a2) => {
     const num = a1.map((e,i) => e == a2[i] ? 4 : a2[i] == "" ?  0 : -1).reduce((a,c)=>a+c,0);
-    return (num > 0 && num) || 0;
+    return num < 0 ? 0 : num;
   };
   
