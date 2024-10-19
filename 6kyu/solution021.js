@@ -20,13 +20,12 @@ For arr = [22, 111, 101, 124, 33, 30], the output should be 124
 
 For arr = [1111, 404], the output should be -1.
 
-
-Will the argument passed into the function always be an array of numbers?
-Will the return always be a number?
-
 */
 
 /*
+Will the argument passed into the function always be an array of numbers?
+Will the return always be a number?
+
 TODO:
 iterate over array
 find the element that satisfies the callback
