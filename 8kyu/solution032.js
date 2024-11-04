@@ -21,7 +21,7 @@ console.log(billboard("Paolo Oli"), 270);
 console.log(billboard("Hjalmar Liupold",40), 600);
 console.log(billboard("Simon Eadwulf"), 390);
 */
-
+/*
 // declare a variable and assign it to an arrow function
 // set parameters name and price = 30
 const billboard = (name, price = 30) => {
@@ -36,3 +36,6 @@ const billboard = (name, price = 30) => {
     //return finalCost
     return finalCost;
 };
+*/
+
+const billboard = (name, price = 30) => name.length / (1 / price);
