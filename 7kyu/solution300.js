@@ -18,6 +18,9 @@ More examples:
 "Las Vegas"  -->  "l:*,a:**,s:**,v:*,e:*,g:*"
 Have fun! ;)
 
+Will the argument passed into the function always be a string?
+Will the return always be a string?
+
 console.log(getStrings("Chicago"), "c:**,h:*,i:*,a:*,g:*,o:*");
 console.log(getStrings("Bangkok"), "b:*,a:*,n:*,g:*,k:**,o:*");
 console.log(getStrings("Las Vegas"), "l:*,a:**,s:**,v:*,e:*,g:*");
