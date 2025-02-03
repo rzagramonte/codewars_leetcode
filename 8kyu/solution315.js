@@ -17,4 +17,4 @@ console.log(twoDecimalPlaces(4.653725356), 4.65);
 
 //declare constant variable twoDecimalPlaces which will be assigned to an arrow function
 //return a number rounded to the nearest tenth
-const twoDecimalPlaces = n => Number(n.toFixed(2));
+const twoDecimalPlaces = n => +(n.toFixed(2));
