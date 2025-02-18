@@ -9,7 +9,7 @@ a custom comparison function of two arguments (iterable elements) which should r
 
 (source: https://docs.python.org/2/library/functions.html#sorted)
 
-The greek alphabet is preloded for you as greek_alphabet:
+The greek alphabet is preloaded for you as greek_alphabet:
 
 greek_alphabet = (
     'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 
