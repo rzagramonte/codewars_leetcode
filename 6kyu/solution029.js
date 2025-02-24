@@ -30,10 +30,13 @@ TODO:
 iterate over the array
 using a hash map
 return number of odd occurrences 
-*/
+
 
 const findOdd = (A) => {
   const occurrences = {};
   A.forEach((e) => (occurrences[e] ? occurrences[e]++ : (occurrences[e] = 1)));
   return +Object.entries(occurrences).find((e) => e[1] % 2)[0];
 };
+*/
+//more efficient:
+const findOdd = (A) => A.reduce((a, c) => a ^ c);
