@@ -12,7 +12,7 @@ After your function finds the needle it should return a message (as a string) th
 Example(Input --> Output)
 ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
 
-Will the parameter alwyas be an array?
+Will the parameter always be an array?
 Will the elements in the array be of any data type?
 Will there always be a string in the array as 'needle'?
 Will the return be a string?
@@ -25,5 +25,10 @@ var haystack_3 = [1,2,3,4,5,6,7,8,8,7,5,4,3,4,5,6,67,5,5,3,3,4,2,34,234,23,4,234
 console.log(findNeedle(haystack_1), 'found the needle at position 3');
 console.log(findNeedle(haystack_2), 'found the needle at position 5');
 console.log(findNeedle(haystack_3), 'found the needle at position 30');
+
+TODO:
+return string using template literal
+find indexOf "needle" in haystack
+interpolate index into string
 */
 const findNeedle = haystack => `found the needle at position ${haystack.indexOf('needle')}`;
