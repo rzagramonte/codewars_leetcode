@@ -14,9 +14,9 @@ The input array's length > 1
 Will the argument passed into the function always be an array of strings?
 Will the return always be an array of strings?
 
-console.log(['u', 'y'], ['u', 'y'], "It should work for ['u', 'y']");
-console.log(['aa', 'bbb', 'cccc'], ['aaa', 'bbb', 'ccc'], "It should work for ['aa', 'bbb', 'cccc']");
-console.log(['aa', 'bb', 'ddd', 'eee'], ['aaa', 'bbb', 'ddd', 'eee'], "It should work for ['aa', 'bb', 'ddd', 'eee']");
+console.log(averageLength(['u', 'y']), ['u', 'y']);
+console.log(averageLength(['aa', 'bbb', 'cccc']), ['aaa', 'bbb', 'ccc']);
+console.log(averageLength(['aa', 'bb', 'ddd', 'eee']), ['aaa', 'bbb', 'ddd', 'eee']);
 
 TODO:
 get average length
