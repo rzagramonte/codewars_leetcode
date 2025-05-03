@@ -15,35 +15,61 @@ Constraints:
 0 <= height[i] <= 1000
 */
 
+// class Solution {
+//   /**
+//    * @param {number[]} height
+//    * @return {number}
+//    */
+//   trap(height) {
+//     let left = 0;
+//     let right = height.length - 1;
+//     let leftMax = 0;
+//     let rightMax = 0;
+//     let water = 0;
+
+//     while (left < right) {
+//       if (height[left] < height[right]) {
+//         if (height[left] >= leftMax) {
+//           leftMax = height[left];
+//         } else {
+//           water += leftMax - height[left];
+//         }
+//         left++;
+//       } else {
+//         if (height[right] >= rightMax) {
+//           rightMax = height[right];
+//         } else {
+//           water += rightMax - height[right];
+//         }
+//         right--;
+//       }
+//     }
+//     return water;
+//   }
+// }
+
 class Solution {
   /**
    * @param {number[]} height
    * @return {number}
    */
   trap(height) {
-    let left = 0;
-    let right = height.length - 1;
-    let leftMax = 0;
-    let rightMax = 0;
-    let water = 0;
+    if (!height.length) return 0;
+    let [l, r] = [0, height.length - 1];
+    let [leftMax, rightMax] = [height[l], height[r]];
+    let res = 0;
 
-    while (left < right) {
-      if (height[left] < height[right]) {
-        if (height[left] >= leftMax) {
-          leftMax = height[left];
-        } else {
-          water += leftMax - height[left];
-        }
-        left++;
+    while (l < r) {
+      if (leftMax < rightMax) {
+        l += 1;
+        leftMax = Math.max(leftMax, height[l]);
+        res += leftMax - height[l];
       } else {
-        if (height[right] >= rightMax) {
-          rightMax = height[right];
-        } else {
-          water += rightMax - height[right];
-        }
-        right--;
+        r -= 1;
+        rightMax = Math.max(rightMax, height[r]);
+        res += rightMax - height[r];
       }
     }
-    return water;
+    return res;
   }
 }
