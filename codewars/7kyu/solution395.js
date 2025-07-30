@@ -26,4 +26,4 @@ else return costs / 3 * 2
 return w 2 decimals, if necessary
 */
 
-const michaelPays = costs => costs < 5 ? +(costs).toFixed(2) : costs / 3 > 10 ? +(costs - 10).toFixed(2) : +(costs / 3 * 2).toFixed(2);
+const michaelPays = costs => +(costs < 5 ? costs : costs / 3 > 10 ? costs - 10 : costs / 3 * 2).toFixed(2);
